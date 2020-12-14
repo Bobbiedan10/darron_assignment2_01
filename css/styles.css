@@ -1,0 +1,301 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100vh;
+}
+
+.wrapper {
+  background: url(../img/Road.jpg) center;
+  background-size: cover;
+  display: grid;
+  height: 100vh;
+}
+
+.Box {
+  background-color: white;
+  padding: 20px;
+}
+
+.j_txt_center {
+  display: grid;
+  justify-content: center;
+}
+
+.a_txt_center {
+  display: grid;
+  align-items: center;
+}
+
+.err {
+  color: red;
+}
+
+.Heading {
+  text-align: center;
+}
+
+.head {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 0.5em;
+}
+
+.menu-content {
+  margin: auto;
+  max-height: 0;
+  overflow: hidden;
+  background-color: rgba(255, 254, 254, 0);
+  color: white;
+}
+.dropdown-menu {
+  background: #fff;
+  padding: 20px;
+  background-color: rgba(255, 254, 254, 0);
+}
+
+.dropdown-menu ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: rgba(255, 254, 254, 0.603);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  background-color: rgba(255, 254, 254, 0.603);
+}
+
+.dropdown-menu label {
+  display: block;
+  cursor: pointer;
+  background-color: rgba(255, 254, 254, 0);
+}
+
+.dropdown-menu label i {
+  font-size: 24px;
+  background-color: rgba(255, 254, 254, 0);
+}
+
+input#menus {
+  display: none;
+}
+
+.dropdown-menu input:checked ~ .menu-content {
+  max-height: 100%;
+  z-index: 1;
+  position: absolute;
+  border: 1px solid black;
+  margin-left: 1em;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 1em;
+  grid-row-gap: 0.5em;
+}
+
+.image {
+  width: 90px;
+  height: 85px;
+}
+
+.button {
+  text-align: center;
+}
+
+.button a {
+  margin: 1em;
+}
+
+.button input {
+  border-radius: 10px;
+  padding: 4px;
+  margin: 20px;
+  text-decoration-line: none;
+}
+
+.P-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.btn a {
+  text-decoration: none;
+  color: black;
+}
+
+.panel {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.panel button {
+  margin: 25px;
+  height: 120px;
+  width: 150px;
+}
+
+.title {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Hamburger Menu */
+.corner {
+  display: grid;
+  justify-content: center;
+}
+.menu-but {
+  width: 40px;
+  height: 6px;
+  border-radius: 5px;
+  background: black;
+}
+
+.menu {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.menu:hover {
+  opacity: 30%;
+  border: 3px solid black;
+}
+
+.menu-but::before,
+.menu-but::after {
+  content: " ";
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  background: black;
+  border-radius: 5px;
+  margin-left: -20px;
+}
+
+.menu-but::before {
+  transform: translateY(-12px);
+}
+
+.menu-but::after {
+  transform: translateY(12px);
+}
+
+.burger-but {
+  display: none;
+  right: 0;
+  background-color: #f1f1f1;
+  width: auto;
+  overflow: auto;
+  top: 100px;
+}
+
+.burger-but a {
+  color: black;
+  padding: 5px;
+  text-decoration: none;
+  display: block;
+}
+
+.burger-but:hover {
+  background-color: lightgrey;
+}
+
+.show {
+  display: block;
+}
+
+/* Phone Size */
+
+@media only screen and (min-width: 600px) {
+  .Box {
+    width: 80vw;
+    height: 95vh;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .j_center {
+    display: grid;
+    justify-content: center;
+  }
+
+  .a_center {
+    display: grid;
+    align-items: center;
+  }
+  .form {
+    overflow-y: scroll;
+    height: 60vh;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .head {
+    grid-template-columns: 1fr 7fr;
+    width: 89%;
+  }
+
+  .Box {
+    width: 90vw;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr 1.5fr 1.5fr;
+    grid-column-gap: 0.5em;
+  }
+
+  .form-row label {
+    text-align: right;
+  }
+  .j_center {
+    display: grid;
+    justify-content: center;
+  }
+
+  .a_center {
+    display: grid;
+    align-items: center;
+  }
+
+  .form {
+    overflow-y: hidden;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .Box {
+    width: 45vw;
+  }
+  .head_but {
+    grid-template-columns: 1fr 5fr 1fr;
+  }
+  .burger-but {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .Box {
+    width: 50vw;
+  }
+}
